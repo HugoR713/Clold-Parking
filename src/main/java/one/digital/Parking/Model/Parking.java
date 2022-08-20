@@ -2,13 +2,16 @@ package one.digital.Parking.Model;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Entity
 public class Parking{
 
+    @Id
     private String id;
     private String license;
     private String state;
@@ -31,4 +34,10 @@ public class Parking{
     }
 
 
+    public LocalDateTime getEntryDate() {
+        return null;
+    }
+
+    public void setEntryDate(LocalDateTime now) {
+    }
 }
